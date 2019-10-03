@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+    <!--<script>
+
+        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        var svgNS = svg.namespaceURI;
+
+        var rect = document.createElementNS(svgNS,'rect');
+        rect.setAttributeNS
+        rect.setAttribute('x',5);
+        rect.setAttribute('y',5);
+        rect.setAttribute('width',500);
+        rect.setAttribute('height',500);
+        rect.setAttribute('fill','#95B3D7');
+        svg.appendChild(rect);
+        document.body.appendChild(svg);
+
+        var h=document.createElement('a');
+        var t=document.createTextNode('Hello World');
+        h.appendChild(t);
+        document.body.appendChild(h);
+
+    </script>-->
+
+        <svg width="500" height="331">
+            <defs>
+                <pattern id="img1" patternUnits="userSpaceOnUse" width="1000" height="700">
+                    <image xlink:href="pexels-photo-617278.jpg" x="0" y="0" width="500" height="331" />
+                </pattern>
+            </defs>
+            
+            <path d="M5,5 L0,680 L980,0 L0,-680 L-980,0 Z" fill="url(#img1)" />
+            
+            <style>
+                .small { font: italic 30px sans-serif; fill: white; }
+                .heavy { font: bold 45px sans-serif; fill: green; }
+
+                /* Note that the color of the text is set with the    *
+                 * fill property, the color property is for HTML only */
+                .Rrrrr { font: italic 60px serif; fill: red; }
+            </style>
+
+              <text x="20" y="55" class="small">My</text>
+              <text x="75" y="55" class="heavy">cat</text>
+              <text x="75" y="100" class="small">is</text>
+              <text x="128" y="100" class="Rrrrr">Grumpy!</text>
+        </svg>
+
+    </body>
+</html>
