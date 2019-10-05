@@ -1,0 +1,13 @@
+const char MAIN_page[] PROGMEM = R"=====(
+<html>
+	<head>
+		<title>Arduino webpage in SD card</title>
+	</head>
+	<body>
+		<center>
+			<h1>Hello, World!</h1>
+			<p>Web page from SD card on Arduino</p>
+		</center>
+	</body>
+</html>
+)=====";

@@ -1,0 +1,26 @@
+Delete other headers
+	epd1in54.h
+	epd2in7.h
+	epd2in8.h
+	epd2in13.h
+	epd4in2.h
+	epd5in83.h
+From epd.h
+
+Delete function:
+	EPD_loadA()
+	EPD_loadB()
+	EPD_loadC()
+	EPD_loadE()
+
+Keep
+	function EPD_loadD()
+From epd.h
+
+Delete function:
+	EPD_showA
+	EPD_showB
+	EPD_showD
+Keep
+	EPD_showC
+From epd.h
