@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>img_viewer</title>
+    </head>
+    <body>
+        <style type="text/css">
+		body {
+		 text-align: left;
+		}
+
+	#all {
+			 margin: 0 auto;
+			 width: 500px;
+             height: 400px;
+			}
+	</style>
+        
+        <script type="text/javascript" src="script.js">get_val();</script>
+        
+        <svg width="500" height="331">
+            <defs>
+                <pattern id="img1" patternUnits="userSpaceOnUse" width="1200" height="675">
+                    <image id="bg" xlink:href="https://assets.bonappetit.com/photos/5aa9665c275dc52331d9184b/16:9/w_1200,c_limit/pantry-pasta.jpg" x="0" y="0" width="500" height="331" /><!--pexels-photo-617278.jpg-->
+                </pattern>
+            </defs>
+            
+            <path d="M5,5 L0,680 L980,0 L0,-680 L-980,0 Z" fill="url(#img1)" />
+            
+            <style>
+                .small { font: italic 30px sans-serif; fill: white; }
+                .heavy { font: bold 45px sans-serif; fill: green; }
+
+                /* Note that the color of the text is set with the    *
+                 * fill property, the color property is for HTML only */
+                .Rrrrr { font: italic 60px serif; fill: red; }
+            </style>
+            
+              <text id="content" x=66 y=165.5 class="Rrrrr">Hello, World</text>
+        </svg>
+    </body>
+</html>
