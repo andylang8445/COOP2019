@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <script>
+            function writeToFile(item)
+            {
+                alert("Hello " + item);
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                var fh = fso.OpenTextFile("/reserve.text", 8);
+                fh.WriteLine(item);
+                fh.Close();
+            }
+
+            function readFile()
+            {
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                var fh = fso.OpenTextFile("/reserve.text", 1, false, 0);
+                var lines = "";
+                while (!fh.AtEndOfStream) {
+                    lines += fh.ReadLine() + "\r";
+                }
+                fh.Close();
+                return lines;
+            }
+        </script>
+    </head>
+    
     <body>
         <style type="text/css">
 		body {
@@ -38,7 +63,7 @@
         <br>
         <input type="text" id="bg_address" placeholder="Web link for bg img"/>
         <br>
-         <a id="hw" href="img_view.html" target="_blank" onclick="return_val()">create image</a>
+         <a id="hw" href="img_view.html" target="_blank" onclick="return_val(); writeToFile(document.getElementById('text').value)" >create image</a>
         
 		<script type="text/javascript" src="script.js"></script>
         
