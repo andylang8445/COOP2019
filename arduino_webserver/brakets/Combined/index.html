@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Combined html</title>
+    </head>
+    
+    <body>
+        <style type="text/css">
+		body {
+		 text-align: center;
+		}
+
+	#all {
+			 margin: 0 auto;
+			 width: 500px;
+             height: 400px;
+			}
+	</style>
+    <!--<script>
+
+        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        var svgNS = svg.namespaceURI;
+
+        var rect = document.createElementNS(svgNS,'rect');
+        rect.setAttributeNS
+        rect.setAttribute('x',5);
+        rect.setAttribute('y',5);
+        rect.setAttribute('width',500);
+        rect.setAttribute('height',500);
+        rect.setAttribute('fill','#95B3D7');
+        svg.appendChild(rect);
+        document.body.appendChild(svg);
+
+        var h=document.createElement('a');
+        var t=document.createTextNode('Hello World');
+        h.appendChild(t);
+        document.body.appendChild(h);
+
+    </script>-->
+        
+		<script type="text/javascript" src="script.js"></script>
+        
+        <div id="myDIV">
+            <input type="text" id="text" placeholder="Input Text"/>
+            <br>
+            <input type="text" id="bg_address" placeholder="Web link for bg img"/>
+            <br>
+             <button id="hw" onclick="return_val(); checkCookie();">Confirm</button>
+        </div>
+        
+        <svg width="500" height="331">
+            <defs>
+                <pattern id="img1" patternUnits="userSpaceOnUse" width="1200" height="675">
+                    <image id="bg" xlink:href="https://assets.bonappetit.com/photos/5aa9665c275dc52331d9184b/16:9/w_1200,c_limit/pantry-pasta.jpg" x="0" y="0" width="500" height="331" />
+                </pattern>
+            </defs>
+            
+            <path d="M5,5 L0,680 L980,0 L0,-680 L-980,0 Z" fill="url(#img1)" />
+            
+            <style>
+                .small { font: italic 30px sans-serif; fill: white; }
+                .heavy { font: bold 45px sans-serif; fill: green; }
+
+                /* Note that the color of the text is set with the    *
+                 * fill property, the color property is for HTML only */
+                .Rrrrr { font: italic 60px serif; fill: red; }
+            </style>
+            
+              <text id="content" x="128" y="100" class="Rrrrr">Grumpy!</text>
+        </svg>
+        
+        <br>
+        <button class="" onclick="myFunction()">Click Me to show/hide the input methods</button>
+    </body>
+</html>
