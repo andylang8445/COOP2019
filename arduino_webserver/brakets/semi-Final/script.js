@@ -1,21 +1,18 @@
+function reload_page(){
+    document.location.reload();
+}
+
 function return_val() {
     // var hw.addEventListener('hw',function(){
     //document.writeln('hello world');
 
     var text_val = document.getElementById('text').value;
 
-    var link = document.getElementById('bg_address').value;
+    //var link = document.getElementById('bg_address').value;
     //document.getElementById('bg').$xlink=link;
     //})
-    myFunction();
     //document.location.reload();
-    checkCookie();
 }
-
-function get_val() {
-    document.getElementById("content").innerHTML = text_val;
-}
-
 
 function setCookie(cname, cvalue, exsecs) {
     var d = new Date();
@@ -41,11 +38,14 @@ function getCookie(cname) {
 
 function checkCookie() {
     var user = getCookie("userinput");
-    if (user != "") {
+    if (user != "") {//cookie exist
         alert("Cookie loaded!");
-        var text_val = document.getElementById('text').value;
+        toggle_hide_input();
+        var text_val = user;
         document.getElementById("content").innerHTML = text_val;
-    } else {
+        var myButton = document.getElementById("text"); //searches for and detects the input element from the 'myButton' id
+        myButton.value = user; //changes the value
+    } else {//no cookie found
         var text_val = document.getElementById('text').value;
         user = text_val;
         if (user != "" && user != null) {
@@ -56,7 +56,7 @@ function checkCookie() {
 
 
 
-function myFunction() {
+function toggle_hide_input() {
     var x = document.getElementById("myDIV");
     if (x.style.display === "none") {
         x.style.display = "block";
@@ -64,3 +64,15 @@ function myFunction() {
         x.style.display = "none";
     }
 }
+
+var setState = 10;
+
+function countdown() {
+	setState--;
+	document.getElementById("seconds").setState = timeleft;
+	if (timeleft > 0) {
+		setTimeout(countdown, 1000);
+	}
+};
+
+setTimeout(countdown, 1000);

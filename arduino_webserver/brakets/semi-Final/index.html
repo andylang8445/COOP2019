@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Combined html</title>
+        <title>Semi-Final html</title>
     </head>
     <body onload="checkCookie();">
         <style type="text/css">
                 body {
-                 text-align: center;
+                 text-align: left;
                 }
             #all {
                      margin: 0 auto;
@@ -16,11 +16,11 @@
         </style>
         <script type="text/javascript" src="script.js"></script>
         <div id="myDIV">
-            <input type="text" id="text" placeholder="Input Text"/>
+            <input type="text" id="text" placeholder="Input Text" value=""/>
             <br>
-            <input type="text" id="bg_address" placeholder="Web link for bg img"/>
-            <br>
-            <button id="hw" onclick="return_val(); checkCookie();">Confirm</button>
+            <!--<input type="text" id="bg_address" placeholder="Web link for bg img"/>
+            <br>-->
+            <button id="hw" onclick="checkCookie(); reload_page();">Confirm</button>
         </div>
         <svg width="500" height="331">
             <defs>
@@ -39,6 +39,9 @@
             <text id="content" x="128" y="100" class="Rrrrr">Grumpy!</text>
         </svg>
         <br>
-        <button class="" onclick="myFunction()">Click Me to show/hide the input methods</button>
+        <button class="" onclick="toggle_hide_input()">Click Me to show/hide the input methods</button>
+        <div id="clock">
+            <span id="seconds">cookie will expire in 10s</span>
+        </div>
     </body>
 </html>
