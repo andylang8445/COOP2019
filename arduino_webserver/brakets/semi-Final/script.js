@@ -44,8 +44,10 @@ function checkCookie() {
         var text_val = user;
         document.getElementById("content").innerHTML = text_val;
         var myButton = document.getElementById("text"); //searches for and detects the input element from the 'myButton' id
+        make_counter_work()
         myButton.value = user; //changes the value
     } else {//no cookie found
+        toggle_hide_counter();
         var text_val = document.getElementById('text').value;
         user = text_val;
         if (user != "" && user != null) {
@@ -65,14 +67,23 @@ function toggle_hide_input() {
     }
 }
 
-var setState = 10;
+function toggle_hide_counter() {
+    var x = document.getElementById("clock");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
 
-function countdown() {
-	setState--;
-	document.getElementById("seconds").setState = timeleft;
-	if (timeleft > 0) {
-		setTimeout(countdown, 1000);
-	}
-};
-
-setTimeout(countdown, 1000);
+function make_counter_work() {
+    var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+      document.getElementById("countdown").innerHTML = "Cookie will expire in "+timeleft + " seconds";
+      timeleft -= 1;
+      if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("countdown").innerHTML = "Cookie Expired"
+      }
+    }, 1000);
+}
