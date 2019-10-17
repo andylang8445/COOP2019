@@ -39,7 +39,7 @@ function getCookie(cname) {
 function checkCookie() {
     var user = getCookie("userinput");
     if (user != "") {//cookie exist
-        alert("Cookie loaded!");
+        //alert("Cookie loaded!");
         toggle_hide_input();
         var text_val = user;
         document.getElementById("content").innerHTML = text_val;
