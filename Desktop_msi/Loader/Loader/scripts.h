@@ -89,7 +89,7 @@ server.send(200, "text/javascript",
 "Btn(5,'Upload image','uploadImage();'));\r\n"
 
 "setInn('XY',getNud('x','0')+getNud('y','0'));\r\n"
-"setInn('WH',getNud('w','200')+getNud('h','200'));\r\n"
+"setInn('WH',getNud('w','640')+getNud('h','384'));\r\n"
   
 "setInn('RB',RB(18,'7.5&ensp;&ensp;'));\r\n"
 "}\r\n"
