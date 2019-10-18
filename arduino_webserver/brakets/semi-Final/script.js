@@ -44,16 +44,17 @@ function checkCookie() {
         var text_val = user;
         document.getElementById("content").innerHTML = text_val;
         var myButton = document.getElementById("text"); //searches for and detects the input element from the 'myButton' id
-        make_counter_work()
+        make_counter_work();
         myButton.value = user; //changes the value
     } else {//no cookie found
+        //alert("Cookie not loaded!");
         toggle_hide_counter();
         var text_val = document.getElementById('text').value;
         user = text_val;
         if (user != "" && user != null) {
             setCookie("userinput", user, 10);
         }
-    }
+    } 
 }
 
 
@@ -68,7 +69,7 @@ function toggle_hide_input() {
 }
 
 function toggle_hide_counter() {
-    var x = document.getElementById("clock");
+    var x = document.getElementById("countdown");
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
