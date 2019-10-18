@@ -85,22 +85,13 @@ server.send(200, "text/javascript",
   
 "setInn('BT',\r\n"
 "Btn(0,'Select image file','processFiles(this.files);')+\r\n"
-"Btn(1,'Level: mono','procImg(true,false);')+\r\n"
-"Btn(2,'Level: color','procImg(true,true);')+\r\n"
 "Btn(3,'Dithering: mono','procImg(false,false);')+\r\n"
-"Btn(4,'Dithering: color','procImg(false,true);')+\r\n"
 "Btn(5,'Upload image','uploadImage();'));\r\n"
 
 "setInn('XY',getNud('x','0')+getNud('y','0'));\r\n"
 "setInn('WH',getNud('w','200')+getNud('h','200'));\r\n"
   
-"setInn('RB',RB(0,'1.54&ensp;')+RB(1,'1.54b')+RB(2,'1.54c')+\r\n"
-"RB(3,'2.13&ensp;')+RB(4,'2.13b')+RB(5,'2.13c')+RB(6,'2.13d')+\r\n"
-"RB(7,'2.7&ensp;&ensp;')+RB(8,'2.7b&ensp;')+\r\n"
-"RB(9,'2.9&ensp;&ensp;')+RB(10,'2.9b&ensp;')+RB(11,'2.9c&ensp;')+\r\n"
-"RB(12,'4.2&ensp;&ensp;')+RB(13,'4.2b&ensp;')+RB(14,'4.2c&ensp;')+\r\n"
-"RB(15,'5.83&ensp;')+RB(16,'5.83b')+RB(17,'5.83c')+\r\n"
-"RB(18,'7.5&ensp;&ensp;')+RB(19,'7.5b&ensp;')+RB(20,'7.5c&ensp;'));\r\n"
+"setInn('RB',RB(18,'7.5&ensp;&ensp;'));\r\n"
 "}\r\n"
 //-------------------------------------------
 "function rbClick(index){\r\n"
@@ -156,7 +147,7 @@ server.send(200, "text/javascript",
 void sendJS_C()
 {
 server.send(200, "text/javascript",
-"function procImg(isLvl,isRed){\r\n"
+"function procImg(isLvl,isRed){\r\n"//false, false: mono
     "if (document.getElementsByClassName('sourceImage').length == 0){\r\n"
         "alert('First select image');\r\n"
         "return;\r\n"

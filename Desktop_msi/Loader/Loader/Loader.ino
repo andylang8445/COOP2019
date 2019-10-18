@@ -75,7 +75,7 @@ void EPD_Init()
   server.send(200, "text/plain", "Init ok\r\n");
 }
 
-void EPD_Load()
+void EPD_Load() 
 {
   //server.arg(0) = data+data.length+'LOAD'
   String p = server.arg(0);

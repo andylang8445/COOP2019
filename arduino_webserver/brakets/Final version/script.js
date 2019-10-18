@@ -103,6 +103,15 @@ function make_counter_work() {
 }
 
 
+htmlToImage.toJpeg(document.getElementById('my-node'), { quality: 0.95 })
+  .then(function (dataUrl) {
+    var link = document.createElement('a');
+    link.download = 'my-image-name.jpeg';
+    link.href = dataUrl;
+    link.click();
+  });
+
+
 
 function onRemoved(cookie) {
   console.log(`Removed: ${cookie}`);
