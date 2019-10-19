@@ -57,7 +57,7 @@ server.send(200, "text/javascript",
 //-------------------------------------------
 "function RB(vl,tx){\r\n"
     "return ((vl%3)>0?' ':'<br>') + '<input type=\"radio\" name=\"kind\" value=\"m'+vl+\r\n"
-  "'\" onclick=\"rbClick('+vl+');\"'+(vl==0?'checked=\"true\"':'')+'/>'+tx;\r\n"
+  "'\" onclick=\"rbClick('+vl+');\"'+(vl==18?'checked=\"true\"':'')+'/>'+tx;\r\n"
 "}\r\n"
 //-------------------------------------------
 "window.onload = function(){\r\n"
