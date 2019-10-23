@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Semi-Final html</title>
+        <title>Final html</title>
     </head>
     <body onload="checkCookie();">
         <style type="text/css">
@@ -18,25 +18,21 @@
         <div id="myDIV">
             <input type="text" id="text" placeholder="Input Text" value=""/>
             <br>
-            <!--<input type="text" id="bg_address" placeholder="Web link for bg img"/>
-            <br>-->
-            <button id="hw" onclick="checkCookie(); reload_page();">Confirm</button>
+            <input type="text" id="bg_address" placeholder="Web link for bg img"/>
+            <br>
+            <button id="hw" onclick="checkCookie(); change_background(); reload_page();">Confirm</button>
         </div>
-        <svg width="500" height="331">
+        <svg viewBox="0 0 500 331" ><!-- width="500" height="331">-->
             <defs>
                 <pattern id="img1" patternunits="userSpaceOnUse" width="1200" height="675">
-                    <image id="bg" xlink:href="https://assets.bonappetit.com/photos/5aa9665c275dc52331d9184b/16:9/w_1200,c_limit/pantry-pasta.jpg" x="0" y="0" width="500" height="331"/>
+                    <image id="bg" xlink:href="https://pds.joins.com/news/component/htmlphoto_mmdata/201901/30/a0257ba6-3c0b-4fc2-b295-4c4ccfb0b862.jpg" x="0" y="0" width="500" height="331"/>
                 </pattern>
             </defs>
             <path d="M5,5 L0,680 L980,0 L0,-680 L-980,0 Z" fill="url(#img1)"/>
             <style>
-                            .small { font: italic 30px sans-serif; fill: white; }
-                            .heavy { font: bold 45px sans-serif; fill: green; }
-                            /* Note that the color of the text is set with the    *
-                             * fill property, the color property is for HTML only */
-                            .Rrrrr { font: italic 60px serif; fill: red; }
+                            .text { font: italic 60px serif; fill: red; }
             </style>
-            <text id="content" x="128" y="100" class="Rrrrr">Grumpy!</text>
+            <text id="content" x="128" y="100" class="text">Blackout</text>
         </svg>
         <br>
         <div id="toggle_button">
