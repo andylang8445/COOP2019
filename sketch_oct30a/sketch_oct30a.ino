@@ -1,15 +1,20 @@
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
+#include <PubSubClient.h>
 
 unsigned long time1;
 unsigned long time2 = 0;
 
+#define mqtt_server "YOUR_MQTT_SERVER_HOST"
+#define mqtt_user "your_username"
+#define mqtt_password "your_password"
+
 const char* ssid = "theHacksmith";
 const char* password = "iamspiderman4";
 
-const int relay = D1;
+const int relay = D4;
 const int input_hw = D5;
-const int outlet=D4;
+const int outlet=D6
 
 void setup() {
 
@@ -68,7 +73,7 @@ void loop() {
       Serial.println("WIFI connection failed!");
       Serial.print("Input pin is in HIGH\n");
       toggle_relay();
-      digitalWrite(input_hw,LOW);
+      //digitalWrite(input_hw,LOW);
     }
   }
 }
