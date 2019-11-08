@@ -181,6 +181,7 @@ void loop() {
   int choice = askChoice();
   if(choice==1)//display cnt field
   {
+    String sql="Select cnt(*) from ";
     
   }
   else if(choice==2)//increase cnt field by 1
