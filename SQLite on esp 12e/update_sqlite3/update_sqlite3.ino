@@ -91,7 +91,7 @@ int db_exec(const char *sql) {
   return rc;
 }
 
-int input_string(char *str, int max_len) {
+int input_string(char *str, int max_len, String input_data) {
   max_len--;
   int ctr = 0;
   str[ctr] = 0;
@@ -174,7 +174,8 @@ void setup() {
     return;
   }
   sqlite3_initialize();
-  db_file_name="click_cnt.sqlite3";
+  input_string(db_file_name,MAX_FILE_NAME_LEN,"click_cnt.sqlite");
+  //db_file_name="click_cnt.sqlite3";
 }
 
 char str[MAX_STR_LEN];
