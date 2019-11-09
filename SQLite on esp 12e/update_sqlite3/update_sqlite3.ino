@@ -174,18 +174,36 @@ void setup() {
     return;
   }
   sqlite3_initialize();
+  db_file_name="click_cnt.sqlite3";
 }
 
 char str[MAX_STR_LEN];
-void loop() {
+
+void update_or_load_sqlite3_file()
+{
   int choice = askChoice();
   if(choice==1)//display cnt field
   {
-    String sql="Select cnt(*) from ";
-    
+    //db_open();
+    sqlite3_open(db_file_name, &db);
+    String sql="Select cnt(*) from log where id=1";
+    db_exec(sql);
+    sqlite3_close(db);
   }
   else if(choice==2)//increase cnt field by 1
   {
+    sqlite3_open(db_file_name, &db);
+    unsigned long time;
+    time=millis();
+    String sql="UPDATE log SET cnt=";
+    sql+=time;
+    sql+=" WHERE id=1";
+    db_exec(sql);
+    sqlite3_close(db);
     
   }
+}
+
+void loop() {
+  update_or_load_sqlite3_file();
 }
