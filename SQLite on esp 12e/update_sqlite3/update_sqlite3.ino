@@ -206,5 +206,6 @@ void update_or_load_sqlite3_file()
 }
 
 void loop() {
+  Serial.println("Enter 1 to view the file, 2 to update the file: ");
   update_or_load_sqlite3_file();
 }
