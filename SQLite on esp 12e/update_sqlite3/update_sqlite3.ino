@@ -143,7 +143,7 @@ enum {CHOICE_OPEN_DB = 1, CHOICE_EXEC_SQL, CHOICE_EXEC_MULTI_SQL, CHOICE_CLOSE_D
       CHOICE_LIST_FOLDER, CHOICE_RENAME_FILE, CHOICE_DELETE_FILE
      };
 
-/*int askChoice() {
+int askChoice() {
   Serial.println();
   Serial.println(F("Welcome to SQLite console!!"));
   Serial.println(F("---------------------------"));
@@ -158,7 +158,7 @@ enum {CHOICE_OPEN_DB = 1, CHOICE_EXEC_SQL, CHOICE_EXEC_MULTI_SQL, CHOICE_CLOSE_D
   Serial.println();
   Serial.print(F("Enter choice: "));
   return input_num();
-}*/
+}
 
 void displayPrompt(const char *title) {
   Serial.print(F("Enter "));
@@ -188,7 +188,9 @@ void update_or_load_sqlite3_file()
     //db_open();
     sqlite3_open(db_file_name, &db);
     String sql="Select cnt(*) from log where id=1";
-    db_exec(sql);
+    
+    char sql_cmd[35]="Select cnt(*) from log where id=1";
+    db_exec(sql_cmd);
     sqlite3_close(db);
   }
   else if(choice==2)//increase cnt field by 1
@@ -199,7 +201,11 @@ void update_or_load_sqlite3_file()
     String sql="UPDATE log SET cnt=";
     sql+=time;
     sql+=" WHERE id=1";
-    db_exec(sql);
+    
+    char sql_cmd[]={'U','P','D','A','T','E',' ','l','o','g',' ','S','E','T',' ','c','n','t','=',(int)time,' ','W','H','E','R','E',' ','i','d','=','1'};
+    /*sql_cmd[20]=(int)time;
+    sql_cmd[21]=" WHERE id=1";*/
+    db_exec(sql_cmd);
     sqlite3_close(db);
     
   }
