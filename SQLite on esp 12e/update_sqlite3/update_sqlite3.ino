@@ -20,6 +20,8 @@ extern "C" {
 #define MAX_FILE_NAME_LEN 100
 #define MAX_STR_LEN 500
 
+int cnt = 0;
+
 void WiFiOff() {
   wifi_station_disconnect();
   wifi_set_opmode(NULL_MODE);
@@ -151,10 +153,7 @@ int askChoice() {
   Serial.print(F("Database file: "));
   Serial.println(db_file_name);
   Serial.println();
-  Serial.println(F("1. Open database                2. Execute SQL"));
-  Serial.println(F("3. Execute Multiple SQL         4. Close database"));
-  Serial.println(F("5. List folder contents         6. Rename file"));
-  Serial.println(F("7. Delete file"));
+  Serial.println(F("1. show value                2. update value on SQL"));
   Serial.println();
   Serial.print(F("Enter choice: "));
   return input_num();
@@ -174,7 +173,7 @@ void setup() {
     return;
   }
   sqlite3_initialize();
-  input_string(db_file_name,MAX_FILE_NAME_LEN,"click_cnt.sqlite");
+  input_string(db_file_name, MAX_FILE_NAME_LEN, "click_cnt.sqlite");
   //db_file_name="click_cnt.sqlite3";
 }
 
@@ -183,31 +182,32 @@ char str[MAX_STR_LEN];
 void update_or_load_sqlite3_file()
 {
   int choice = askChoice();
-  if(choice==1)//display cnt field
+  if (choice == 1) //display cnt field
   {
     //db_open();
     sqlite3_open(db_file_name, &db);
-    String sql="Select cnt(*) from log where id=1";
-    
-    char sql_cmd[35]="Select cnt(*) from log where id=1";
+    String sql = "Select cnt(*) from log where id=1";
+
+    char sql_cmd[35] = "Select cnt(*) from log where id=1";
     db_exec(sql_cmd);
     sqlite3_close(db);
   }
-  else if(choice==2)//increase cnt field by 1
+  else if (choice == 2) //increase cnt field by 1
   {
     sqlite3_open(db_file_name, &db);
     unsigned long time;
-    time=millis();
-    String sql="UPDATE log SET cnt=";
-    sql+=time;
-    sql+=" WHERE id=1";
-    
-    char sql_cmd[]={'U','P','D','A','T','E',' ','l','o','g',' ','S','E','T',' ','c','n','t','=',(int)time,' ','W','H','E','R','E',' ','i','d','=','1'};
+    time = millis();
+    String sql = "UPDATE log SET cnt=";
+    sql += time;
+    sql += " WHERE id=1";
+
+    char sql_cmd[] = {'U', 'P', 'D', 'A', 'T', 'E', ' ', 'l', 'o', 'g', ' ', 'S', 'E', 'T', ' ', 'c', 'n', 't', '=',/*(int)time*/'0' +cnt};
     /*sql_cmd[20]=(int)time;
-    sql_cmd[21]=" WHERE id=1";*/
+      sql_cmd[21]=" WHERE id=1";*/
+    cnt++;
     db_exec(sql_cmd);
     sqlite3_close(db);
-    
+
   }
 }
 
