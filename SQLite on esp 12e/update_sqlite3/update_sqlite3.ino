@@ -30,7 +30,7 @@ void WiFiOff() {
   wifi_fpm_do_sleep(0xFFFFFFF);
 }
 
-char db_file_name[MAX_FILE_NAME_LEN] = "\0";
+char db_file_name[MAX_FILE_NAME_LEN] = "click_cnt.sqlite3";
 sqlite3 *db = NULL;
 int rc;
 File db_file_obj_1;
