@@ -5,7 +5,7 @@
 	$a2_d=$_POST["a2"];
 	$a3_d=$_POST["a3"];
 	
-	$re=mysqli_query($conn,"INSERT INTO index1 VALUES('$a1_d','$a2_d','a3_d')");
+	mysqli_query($conn,"INSERT INTO index1 VALUES('$a1_d','$a2_d','a3_d')");
 	$re=mysqli_query($conn,"SELECT * FROM index1 ORDER by id");
 	
 	while($result=mysqli_fetch_array($re)){
