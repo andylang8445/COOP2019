@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Yee</title>
+    <style>
+      body {
+        font-family: Consolas, monospace;
+        font-family: 12px;
+      }
+      table {
+        width: 100%;
+      }
+      th, td {
+        padding: 10px;
+        border-bottom: 1px solid #dadada;
+      }
+    </style>
+  </head>
+  <body>
+	<?
+		echo "<p>Hello World</p>";
+	?>
+	
+	
+	<?php
+			$servername="localhost";
+			$username="root";
+			$passward="0000";
+			$dbname="test";
+			//create connection
+          $conn = new mysqli($servername,$username,$passward,$dbname);
+		  //check connection
+		  if($conn->connect_error)
+		  {
+			echo "connect error";
+			die("Connction failed: ".$conn->connect_error);
+		  }
+		  
+          $sql = "SELECT * FROM index1";
+          $result = $conn->quary($sql);
+		  if($result->num_rows>0){
+			//output data of each rows
+			while($row=$result->fetch_assoc()){
+				echo "<p>".$row["id"].$row["name"].$row["birthday"].$row["age"]."</p>";
+				}
+		  }
+		  else
+		  {
+			echo "0 results";
+		  }
+		  $conn->close();
+          /*while( $jb_row = mysqli_fetch_array( $jb_result ) ) {
+            echo "<p>".$jb_row["id"].$jb_row["name"].$jb_row["birthday"].$jb_row["age"]."</p>";
+          }*/
+        ?>
+		
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>last_name</th>
+          <th>hire_date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+			$servername="localhost";
+			$username="root";
+			$passward="0000";
+			$dbname="test";
+			//create connection
+          $conn = new mysqli($servername,$username,$passward,$dbname);
+		  //check connection
+		  if($conn->connect_error)
+		  {
+			echo "connect error";
+			die("Connction failed: ".$conn->connect_error);
+		  }
+		  
+          $sql = "SELECT * FROM index1";
+          $result = $conn->quary($sql);
+		  if($result->num_rows>0){
+			//output data of each rows
+			while($row=$result->fetch_assoc()){
+				echo "<p>".$row["id"].$row["name"].$row["birthday"].$row["age"]."</p>";
+				}
+		  }
+		  else
+		  {
+			echo "0 results";
+		  }
+		  $conn->close();
+          /*while( $jb_row = mysqli_fetch_array( $jb_result ) ) {
+            echo "<p>".$jb_row["id"].$jb_row["name"].$jb_row["birthday"].$jb_row["age"]."</p>";
+          }*/
+        ?>
+      </tbody>
+    </table>
+  </body>
+</html>
