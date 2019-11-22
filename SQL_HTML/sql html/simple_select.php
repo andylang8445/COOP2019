@@ -1,7 +1,10 @@
 <?php
 	$conn = mysqli_connect("localhost","root","0000","test") or die("Connection Failed");
 	print "Connection Successful!"."<p>";
-	$re=mysqli_query($conn,"SELECT * FROM index1 order by id");
+	
+	print "simple_select.php loaded<br><br>";
+	
+	$re=mysqli_query($conn,"SELECT * FROM index1 order by id;");
 	while($result=mysqli_fetch_array($re)){
 		print $result[3].": ";
 		print $result[0]." ";
