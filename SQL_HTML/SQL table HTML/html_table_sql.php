@@ -4,7 +4,7 @@
 	
 	print "html_sql_table.php loaded<br><br>";
 
-    print '<table style="width:100%""><tr><th>id</th><th>name</th><ht>birthday</th><th>age</th></tr>';
+    print '<table style="width:100%""><tr><th>id</th><th>name</th><th>birthday</th><th>age</th></tr>';
 	
 	$re=mysqli_query($conn,"SELECT * FROM index1 order by id;");
 	while($result=mysqli_fetch_array($re)){
