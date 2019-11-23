@@ -9,10 +9,10 @@
 	$re=mysqli_query($conn,"SELECT * FROM index1 order by id;");
 	while($result=mysqli_fetch_array($re)){
         print "<tr>";
-		print "<th>".$result[3]."</th>";
-		print "<th>".$result[0]."</th>";
-		print "<th>".$result[1]."</th>";
-		print "<th>".$result[2]."</th>";
+		print "<td>".$result[3]."</td>";
+		print "<td>".$result[0]."</td>";
+		print "<td>".$result[1]."</td>";
+		print "<td>".$result[2]."</td>";
         print "</tr>";
 	}
 	mysqli_close($conn);
