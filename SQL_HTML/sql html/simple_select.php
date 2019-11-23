@@ -1,5 +1,9 @@
 <?php
-	$conn = mysqli_connect("localhost","root","0000","test") or die("Connection Failed");
+	$sql_addr = "localhost";
+    $sql_user_name="root";
+    $sql_pwd="0000";
+    $sql_db_name="test";
+	$conn = mysqli_connect($sql_addr,$sql_user_name,$sql_pwd,$sql_db_name) or die("Connection Failed");
 	print "Connection Successful!"."<p>";
 	
 	print "simple_select.php loaded<br><br>";
