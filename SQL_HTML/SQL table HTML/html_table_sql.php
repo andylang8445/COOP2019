@@ -3,6 +3,7 @@
     $sql_user_name="root";
     $sql_pwd="0000";
     $sql_db_name="test";
+
 	$conn = mysqli_connect($sql_addr,$sql_user_name,$sql_pwd,$sql_db_name) or die("Connection Failed");
 	print "Connection Successful!"."<p>";
 	
