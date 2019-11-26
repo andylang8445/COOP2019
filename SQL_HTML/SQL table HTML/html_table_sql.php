@@ -21,5 +21,5 @@
         print "</tr>";
 	}
 	mysqli_close($conn);
-	print "<br><a href='simple.html'>Main screen</a>";
+	print "<br><a href='table.html'>Main screen</a>";
 ?>
