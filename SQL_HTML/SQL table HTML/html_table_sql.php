@@ -11,6 +11,8 @@
 
     print '<table border="2"><tr><th>id</th><th>name</th><th>birthday</th><th>age</th></tr>';
 	
+	$tot=0;
+	
 	$re=mysqli_query($conn,"SELECT * FROM index1 order by id;");
 	while($result=mysqli_fetch_array($re)){
         print "<tr>";
@@ -19,7 +21,9 @@
 		print "<td>".$result[1]."</td>";
 		print "<td>".$result[2]."</td>";
         print "</tr>";
+		$tot++;
 	}
+	print $tot." rows<br>";
 	mysqli_close($conn);
 	print "<br><a href='table.html'>Main screen</a>";
 ?>
