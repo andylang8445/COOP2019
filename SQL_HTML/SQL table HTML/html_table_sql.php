@@ -54,7 +54,7 @@
 
     print"<br>sorted data by name";
     foreach ((array) $tot_result as $key => $value) {
-        $sort[$key] = $value['name'];
+        $sort[$key] = $value["name"];
     }
 
     array_multisort($sort, SORT_ASC, $tot_result);
