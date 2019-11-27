@@ -14,26 +14,26 @@
 	$tot=0;
 
     $tot_result=array(
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
-        array();
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array(),
+        array()
     );
 	
 	$re=mysqli_query($conn,"SELECT * FROM index1 order by id;");
