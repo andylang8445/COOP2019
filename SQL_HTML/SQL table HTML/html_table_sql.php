@@ -9,7 +9,7 @@
 	
 	print "html_sql_table.php loaded<br><br>";
 
-    print '<table border="2"><tr><th>id</th><th>name</th><th>birthday</th><th>age</th></tr>';
+    
 	
 	$tot=0;
 
@@ -37,28 +37,39 @@
     );
 	
 	$re=mysqli_query($conn,"SELECT * FROM index1 order by id;");
+	print '<table border="2"><tr><th>id</th><th>name</th><th>birthday</th><th>age</th></tr>';
 	while($result=mysqli_fetch_array($re)){
         print "<tr>";
 		print "<td>".$result[3]."</td>";
-        $tot_result[$tot]["id"]=$result[3];
+        $tot_result[$tot][0]=$result[3];
 		print "<td>".$result[0]."</td>";
-        $tot_result[$tot]["name"]=$result[0];
+        $tot_result[$tot][1]=$result[0];
 		print "<td>".$result[1]."</td>";
-        $tot_result[$tot]["birthday"]=$result[1];
+        $tot_result[$tot][2]=$result[1];
 		print "<td>".$result[2]."</td>";
-        $tot_result[$tot]["age"]=$result[2];
+        $tot_result[$tot][3]=$result[2];
         print "</tr>";
 		$tot++;
 	}
 	print $tot." rows<br>";
-
+	$sort=array();
     print"<br>sorted data by name";
-    foreach ((array) $tot_result as $key => $value) {
-        $sort[$key] = $value["name"];
+    for($i=0;$i<$tot;$i++){
+        $sort[$i] = $tot_result[$i][1];
     }
 
-    array_multisort($sort, SORT_ASC, $tot_result);
-    print_r($tot_result);
+    array_multisort($sort, SORT_ASC, SORT_STRING,$tot_result);
+	$tot=0;
+    print '<table border="2"><tr><th>id</th><th>name</th><th>birthday</th><th>age</th></tr>';
+	while($result=mysqli_fetch_array($re)){
+        print "<tr>";
+		print "<td>".$tot_result[tot][0]."</td>";
+		print "<td>".$tot_result[tot][1]."</td>";
+		print "<td>".$tot_result[tot][2]."</td>";
+		print "<td>".$tot_result[tot][3]."</td>";
+        print "</tr>";
+		$tot++;
+	}
 
 
 	mysqli_close($conn);
