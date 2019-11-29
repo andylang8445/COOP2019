@@ -55,7 +55,7 @@
 	$sort=array();
     print"<br>sorted data by name";
     for($i=0;$i<$tot-1;$i++){
-        for($j=$i+1;$j<$tot;$j++){
+        for($j=$i;$j<$tot;$j++){
             if($tot_result[$i][1]>$tot_result[$j][1]){
                 for($k=0;$k<4;$k++){
                     $tmp=$tot_result[$i][$k];
@@ -68,7 +68,7 @@
 
     //array_multisort($sort, SORT_ASC, SORT_STRING,$tot_result);
     print '<table border="2"><tr><th>id</th><th>name</th><th>birthday</th><th>age</th></tr>';
-	for($i=0;$i<$tot;i++){
+	for($i=0;$i<$tot;$i++){
         print "<tr>";
 		print "<td>".$tot_result[$i][0]."</td>";
 		print "<td>".$tot_result[$i][1]."</td>";
