@@ -58,17 +58,15 @@
         $sort[$i] = $tot_result[$i][1];
     }
 
-    array_multisort($sort, SORT_ASC, SORT_STRING,$tot_result);
-	$tot=0;
+    //array_multisort($sort, SORT_ASC, SORT_STRING,$tot_result);
     print '<table border="2"><tr><th>id</th><th>name</th><th>birthday</th><th>age</th></tr>';
-	while($result=mysqli_fetch_array($re)){
+	for($i=0;$i<tot;i++){
         print "<tr>";
-		print "<td>".$tot_result[tot][0]."</td>";
-		print "<td>".$tot_result[tot][1]."</td>";
-		print "<td>".$tot_result[tot][2]."</td>";
-		print "<td>".$tot_result[tot][3]."</td>";
+		print "<td>".$tot_result[i][0]."</td>";
+		print "<td>".$tot_result[i][1]."</td>";
+		print "<td>".$tot_result[i][2]."</td>";
+		print "<td>".$tot_result[i][3]."</td>";
         print "</tr>";
-		$tot++;
 	}
 
 
