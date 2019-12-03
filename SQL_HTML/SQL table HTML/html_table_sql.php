@@ -54,8 +54,8 @@
 	print $tot." rows<br>";
 	$sort=array();
     print"<br>sorted data by name";
-    for($i=0;$i<$tot-1;$i++){
-        for($j=$i;$j<$tot;$j++){
+    for($i=0;$i<$tot;$i++){
+        for($j=$i;$j<$tot+1;$j++){
             if($tot_result[$i][1]>$tot_result[$j][1]){
                 for($k=0;$k<4;$k++){
                     $tmp=$tot_result[$i][$k];
