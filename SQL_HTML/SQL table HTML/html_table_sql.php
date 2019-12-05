@@ -53,6 +53,7 @@
 	}
     echo '<script type="text/javascript" src="html_table_sql.js"></script>';
     //array_multisort($sort, SORT_ASC, SORT_STRING,$tot_result);
+setCookie_1();
     print '<table border="2"><tr><th onclick="myFunction();">id▼</th><th onclick="setCookie_1();">name</th><th>birthday</th><th>age</th></tr>';
 	for($i=0;$i<$tot;$i++){
         print "<tr>";
@@ -62,6 +63,11 @@
 		print "<td>".$tot_result[$i][3]."</td>";
         print "</tr>";
 	}
+    if(count($_COOKIE) > 0) {
+        echo "Cookies are enabled.";
+    } else {
+        echo "Cookies are disabled.";
+    }
 	$sort=array();
     print"<br>sorted data by name";
     for($i=0;$i<$tot-1;$i++){
