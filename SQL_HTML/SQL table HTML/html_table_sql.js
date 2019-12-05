@@ -9,6 +9,7 @@ function setCookie_1() {
     var expires = "expires=" + d.toUTCString();
     document.cookie = "cookie=1;" + expires + ";path=/";
     alert("setCookie_1 activated!");
+    location.reload();
 }
 
 // Function to create the cookie 

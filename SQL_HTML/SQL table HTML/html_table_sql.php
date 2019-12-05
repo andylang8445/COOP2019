@@ -53,7 +53,6 @@
 	}
     echo '<script type="text/javascript" src="html_table_sql.js"></script>';
     //array_multisort($sort, SORT_ASC, SORT_STRING,$tot_result);
-setCookie_1();
     print '<table border="2"><tr><th onclick="myFunction();">id▼</th><th onclick="setCookie_1();">name</th><th>birthday</th><th>age</th></tr>';
 	for($i=0;$i<$tot;$i++){
         print "<tr>";
