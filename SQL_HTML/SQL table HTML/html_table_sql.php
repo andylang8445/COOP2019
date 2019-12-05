@@ -51,9 +51,7 @@
         //wprint "</tr>";
 		$tot++;
 	}
-    echo '<function myFunction() {
-            alert("I am an alert box!");
-            }';
+    echo '<script type="text/javascript" src="html_table_sql.js"></script>';
     //array_multisort($sort, SORT_ASC, SORT_STRING,$tot_result);
     print '<table border="2"><tr onclick="myFunction();"><th>id</th><th>name</th><th>birthday</th><th>age</th></tr>';
 	for($i=0;$i<$tot;$i++){
