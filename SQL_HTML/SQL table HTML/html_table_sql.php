@@ -68,6 +68,7 @@
     for($i=0;$i<$tot-1;$i++){
         for($j=$i+1;$j<$tot;$j++){
             if($tot_result[$i][1]>$tot_result[$j][1]){
+                $tmp;
                 for($k=0;$k<4;$k++){
                     $tmp=$tot_result[$i][$k];
                     $tot_result[$i][$k]=$tot_result[$j][$k];
