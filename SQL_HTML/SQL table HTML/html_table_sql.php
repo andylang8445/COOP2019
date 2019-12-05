@@ -72,7 +72,7 @@
                 for($k=0;$k<4;$k++){
                     $tmp=$tot_result[$i][$k];
                     $tot_result[$i][$k]=$tot_result[$j][$k];
-                    $tot_result[$j][$k]=$tot;
+                    $tot_result[$j][$k]=tmp;
                 }
             }
         }
