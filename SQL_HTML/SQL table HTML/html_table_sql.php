@@ -7,7 +7,7 @@
 	$conn = mysqli_connect($sql_addr,$sql_user_name,$sql_pwd,$sql_db_name) or die("Connection Failed");
 	print "Connection Successful!"."<p>";
 	
-	print "html_sql_table.php loaded<br><br>";
+	print "html_table_sql.php loaded<br><br>";
 
     
 	
