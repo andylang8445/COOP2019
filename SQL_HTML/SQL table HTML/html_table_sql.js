@@ -3,9 +3,34 @@ function myFunction() {
 }
    
 // Function to create the cookie 
-function setCookie(cname, cvalue, extime) {
+function setCookie_1() {
   var d = new Date();
-  d.setTime(d.getTime() + (extime*1000));
+  d.setTime(d.getTime() + (10*1000));
   var expires = "expires="+ d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  document.cookie = "cookie=1;" + expires + ";path=/";
 }
+
+// Function to create the cookie 
+function setCookie_2() {
+  var d = new Date();
+  d.setTime(d.getTime() + (10*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = "cookie=2;" + expires + ";path=/";
+}
+
+// Function to create the cookie 
+function setCookie_3() {
+  var d = new Date();
+  d.setTime(d.getTime() + (10*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = "cookie=3;" + expires + ";path=/";
+}
+
+// Function to create the cookie 
+function setCookie_4() {
+  var d = new Date();
+  d.setTime(d.getTime() + (10*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = "cookie=4;" + expires + ";path=/";
+}
+
