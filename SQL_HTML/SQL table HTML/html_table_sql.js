@@ -2,6 +2,10 @@ function myFunction() {
     alert("I am an alert box!");
 }
 
+function button1_click() {
+    setCookie_1();
+    
+}
 // Function to create the cookie 
 function setCookie_1() {
     var d = new Date();
