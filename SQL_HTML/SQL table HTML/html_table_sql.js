@@ -1,11 +1,8 @@
 function myFunction() {
     alert("I am an alert box!");
+    return 0;
 }
 
-function button1_click() {
-    setCookie_1();
-    
-}
 // Function to create the cookie 
 function setCookie_1() {
     var d = new Date();
@@ -16,26 +13,19 @@ function setCookie_1() {
     location.reload();
 }
 
-// Function to create the cookie 
-function setCookie_2() {
-    var d = new Date();
-    d.setTime(d.getTime() + (10 * 1000));
-    var expires = "expires=" + d.toUTCString();
-    document.cookie = "cookie=2;" + expires + ";path=/";
-}
+var mysql = require('mysql');
 
-// Function to create the cookie 
-function setCookie_3() {
-    var d = new Date();
-    d.setTime(d.getTime() + (10 * 1000));
-    var expires = "expires=" + d.toUTCString();
-    document.cookie = "cookie=3;" + expires + ";path=/";
-}
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "0000",
+  database: "test"
+});
 
-// Function to create the cookie 
-function setCookie_4() {
-    var d = new Date();
-    d.setTime(d.getTime() + (10 * 1000));
-    var expires = "expires=" + d.toUTCString();
-    document.cookie = "cookie=4;" + expires + ";path=/";
-}
+con.connect(function(err) {
+  if (err) throw err;
+  con.query("SELECT * FROM index1 order by id;", function (err, result) {
+    if (err) throw err;
+    console.log(result);
+  });
+});
