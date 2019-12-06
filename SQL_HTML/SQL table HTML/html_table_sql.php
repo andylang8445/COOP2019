@@ -1,5 +1,7 @@
 <?php
-
+if (isset($_GET['hello'])) {
+    button1_clicked();
+  }
 function button1_clicked(){
     echo "<script type='text/javascript'>alert('$message');</script>";
 }
@@ -59,7 +61,7 @@ function button1_clicked(){
     echo '<script type="text/javascript" src="html_table_sql.js"></script>';
     //array_multisort($sort, SORT_ASC, SORT_STRING,$tot_result);
     $sort_sel=1;
-    print '<table border="2"><tr><th onclick="index.php?button1_clicked();">id▼</th><th>name</th><th>birthday</th><th>age</th></tr>';
+    print '<table border="2"><tr><th onclick="html_table_sql.php?hello=true">id▼</th><th>name</th><th>birthday</th><th>age</th></tr>';
     for($i=0;$i<$tot;$i++){
         print "<tr>" ; 
         print "<td>" .$tot_result[$i][0]."</td>"; 
