@@ -1,6 +1,5 @@
 function myFunction() {
     alert("I am an alert box!");
-    return 0;
 }
 
 // Function to create the cookie 
