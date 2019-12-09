@@ -9,6 +9,7 @@
 
     <p>Click the button to sort the table alphabetically, by name:</p>
     <p><button onclick="sortTable()">Sort</button></p>
+    <p id="demo"></p>
 
     <table id="myTable" border="2">
         <tr>
@@ -48,7 +49,6 @@
             <td>Canada</td>
         </tr>
     </table>
-
     <script>
         function sortTable() {
             var table, rows, switching, i, x, y, shouldSwitch;
@@ -92,7 +92,12 @@
                     switching = true;
                 }
             }
-            document.write("Table Sorted");
+            
+            if (document.getElementById("demo").innerHTML == "") {
+                document.getElementById("demo").innerHTML = "Table Sorted!";
+            } else {
+                document.getElementById("demo").innerHTML = "";
+            }
         }
 
     </script>
