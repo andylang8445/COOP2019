@@ -46,13 +46,17 @@ function sortTable2() {
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
     switching = true;
+    rows = table.rows;
+    var increse = true;
+    if (rows[i].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[i + 1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
+        increase = false;
+    }
     /*Make a loop that will continue until
     no switching has been done:*/
 
     while (switching) {
         //start by saying: no switching is done:
         switching = false;
-        rows = table.rows;
         /*Loop through all table rows (except the
         first, which contains table headers):*/
 
@@ -64,8 +68,11 @@ function sortTable2() {
             x = rows[i].getElementsByTagName("TD")[1];
             y = rows[i + 1].getElementsByTagName("TD")[1];
             //check if the two rows should switch place:
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() && increse == true) {
                 //if so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+            } else if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() && increse == false) {
                 shouldSwitch = true;
                 break;
             }
@@ -83,13 +90,17 @@ function sortTable3() {
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
     switching = true;
+    rows = table.rows;
+    var increse = true;
+    if (rows[i].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[i + 1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
+        increase = false;
+    }
     /*Make a loop that will continue until
     no switching has been done:*/
 
     while (switching) {
         //start by saying: no switching is done:
         switching = false;
-        rows = table.rows;
         /*Loop through all table rows (except the
         first, which contains table headers):*/
 
@@ -101,8 +112,11 @@ function sortTable3() {
             x = rows[i].getElementsByTagName("TD")[2];
             y = rows[i + 1].getElementsByTagName("TD")[2];
             //check if the two rows should switch place:
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() && increse == true) {
                 //if so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+            } else if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() && increse == false) {
                 shouldSwitch = true;
                 break;
             }
@@ -120,13 +134,17 @@ function sortTable4() {
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
     switching = true;
+    rows = table.rows;
+    var increse = true;
+    if (rows[i].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[i + 1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
+        increase = false;
+    }
     /*Make a loop that will continue until
     no switching has been done:*/
 
     while (switching) {
         //start by saying: no switching is done:
         switching = false;
-        rows = table.rows;
         /*Loop through all table rows (except the
         first, which contains table headers):*/
 
@@ -138,8 +156,11 @@ function sortTable4() {
             x = rows[i].getElementsByTagName("TD")[3];
             y = rows[i + 1].getElementsByTagName("TD")[3];
             //check if the two rows should switch place:
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() && increse == true) {
                 //if so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+            } else if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() && increse == false) {
                 shouldSwitch = true;
                 break;
             }
