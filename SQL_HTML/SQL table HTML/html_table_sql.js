@@ -5,7 +5,7 @@ function sortTable1() {
     rows = table.rows;
     var increse = true;
     if (rows[i].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[i + 1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
-        increase = false;
+        increse = false;
     }
     /*Make a loop that will continue until
     no switching has been done:*/
@@ -48,8 +48,8 @@ function sortTable2() {
     switching = true;
     rows = table.rows;
     var increse = true;
-    if (rows[i].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[i + 1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
-        increase = false;
+    if (rows[0].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
+        increse = false;
     }
     /*Make a loop that will continue until
     no switching has been done:*/
@@ -92,8 +92,8 @@ function sortTable3() {
     switching = true;
     rows = table.rows;
     var increse = true;
-    if (rows[i].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[i + 1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
-        increase = false;
+    if (rows[0].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
+        increse = false;
     }
     /*Make a loop that will continue until
     no switching has been done:*/
@@ -136,8 +136,8 @@ function sortTable4() {
     switching = true;
     rows = table.rows;
     var increse = true;
-    if (rows[i].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[i + 1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
-        increase = false;
+    if (rows[0].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
+        increse = false;
     }
     /*Make a loop that will continue until
     no switching has been done:*/
