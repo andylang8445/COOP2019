@@ -28,6 +28,9 @@ function sortTable1() {
                 //if so, mark as a switch and break the loop:
                 shouldSwitch = true;
                 break;
+            } else if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() && increse == false) {
+                shouldSwitch = true;
+                break;
             }
         }
         if (shouldSwitch) {
