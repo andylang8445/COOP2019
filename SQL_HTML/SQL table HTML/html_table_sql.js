@@ -4,7 +4,7 @@ function sortTable1() {
     switching = true;
     rows = table.rows;
     var increse = true;
-    if (rows[i].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[i + 1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
+    if (rows[0].getElementsByTagName("TD")[0] > rows[1].getElementsByTagName("TD")[0]) {
         increse = false;
     }
     /*Make a loop that will continue until
@@ -40,6 +40,12 @@ function sortTable1() {
             switching = true;
         }
     }
+
+    if (document.getElementById("demo").innerHTML == "") {
+        document.getElementById("demo").innerHTML = "Table Sorted!";
+    } else {
+        document.getElementById("demo").innerHTML = "";
+    }
 }
 
 function sortTable2() {
@@ -48,7 +54,7 @@ function sortTable2() {
     switching = true;
     rows = table.rows;
     var increse = true;
-    if (rows[0].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
+    if (rows[0].getElementsByTagName("TD")[1] > rows[1].getElementsByTagName("TD")[1]) {
         increse = false;
     }
     /*Make a loop that will continue until
@@ -84,6 +90,12 @@ function sortTable2() {
             switching = true;
         }
     }
+
+    if (document.getElementById("demo").innerHTML == "") {
+        document.getElementById("demo").innerHTML = "Table Sorted!";
+    } else {
+        document.getElementById("demo").innerHTML = "";
+    }
 }
 
 function sortTable3() {
@@ -92,7 +104,7 @@ function sortTable3() {
     switching = true;
     rows = table.rows;
     var increse = true;
-    if (rows[0].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
+    if (rows[0].getElementsByTagName("TD")[2] > rows[1].getElementsByTagName("TD")[2]) {
         increse = false;
     }
     /*Make a loop that will continue until
@@ -128,6 +140,12 @@ function sortTable3() {
             switching = true;
         }
     }
+
+    if (document.getElementById("demo").innerHTML == "") {
+        document.getElementById("demo").innerHTML = "Table Sorted!";
+    } else {
+        document.getElementById("demo").innerHTML = "";
+    }
 }
 
 function sortTable4() {
@@ -136,7 +154,7 @@ function sortTable4() {
     switching = true;
     rows = table.rows;
     var increse = true;
-    if (rows[0].getElementsByTagName("TD")[0].innerHTML.toLowerCase() > rows[1].getElementsByTagName("TD")[0].innerHTML.toLowerCase()) {
+    if (rows[0].getElementsByTagName("TD")[3] > rows[1].getElementsByTagName("TD")[3]) {
         increse = false;
     }
     /*Make a loop that will continue until
@@ -171,5 +189,11 @@ function sortTable4() {
             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
             switching = true;
         }
+    }
+
+    if (document.getElementById("demo").innerHTML == "") {
+        document.getElementById("demo").innerHTML = "Table Sorted!";
+    } else {
+        document.getElementById("demo").innerHTML = "";
     }
 }
