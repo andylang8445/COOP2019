@@ -61,7 +61,7 @@ function button1_clicked(){
     echo '<script type="text/javascript" src="html_table_sql.js"></script>';
     //array_multisort($sort, SORT_ASC, SORT_STRING,$tot_result);
     $sort_sel=1;
-    print '<table id="myTable" border="2"><tr><th onclick="sortTable1();">id▼</th><th onclick="sortTable2();">name</th><th onclick="sortTable3();">birthday</th><th onclick="sortTable4();">age</th></tr>';
+    print '<table id="myTable" border="2"><tr><th onclick="sortTable1();">id</th><th onclick="sortTable2();">name</th><th onclick="sortTable3();">birthday</th><th onclick="sortTable4();">age</th></tr>';
     for($i=0;$i<$tot;$i++){
         print "<tr>" ; 
         print "<td>" .$tot_result[$i][0]."</td>"; 
@@ -76,7 +76,6 @@ function button1_clicked(){
         echo "Cookies are disabled.";
     }
     $sort=array();
-    print"<br>sorted data by name";
     for($i=0;$i<$tot-1;$i++){ 
         for($j=$i+1;$j<$tot;$j++){ 
             if($tot_result[$i][1]>$tot_result[$j][1]){
