@@ -1,9 +1,11 @@
 <?php
-if (isset($_GET['hello'])) {
-    button1_clicked();
-  }
-function button1_clicked(){
-    echo "<script type='text/javascript'>alert('$message');</script>";
+function toggle() {
+    if($previous==$sorted_element){
+        if($sorted_increase_decrease==0)
+            $sorted_increase_decrease=1;
+        else
+            $sorted_increase_decrease=0;
+    }
 }
 
     $sql_addr = "localhost";
@@ -62,10 +64,11 @@ function button1_clicked(){
     //array_multisort($sort, SORT_ASC, SORT_STRING,$tot_result);
     $sort_sel=1;
 
+    $previous=0;
     $sorted_element=0;//0:id, 1:name, 2:birthday, 3:age
     $sorted_increase_decrease=0;//0: increase, 1: decrease
     
-    print '<table id="myTable" border="2"><tr><th onclick="sortTable1();">id</th><th onclick="sortTable2();">name</th><th onclick="sortTable3();">birthday</th><th onclick="sortTable4();">age</th></tr>';
+    print '<table id="myTable" border="2"><tr><th onclick="sortTable1();$previous=$sorted_element;toggle();$sorted_element=0;">id</th><th onclick="sortTable2();$previous=$sorted_element;toggle();$sorted_element=1;">name</th><th onclick="sortTable3();$previous=$sorted_element;toggle();$sorted_element=2;">birthday</th><th onclick="sortTable4();$previous=$sorted_element;toggle();$sorted_element=3;">age</th></tr>';
     for($i=0;$i<$tot;$i++){
         print "<tr>" ; 
         print "<td>" .$tot_result[$i][0]."</td>"; 
