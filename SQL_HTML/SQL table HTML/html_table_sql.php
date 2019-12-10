@@ -61,6 +61,10 @@ function button1_clicked(){
     echo '<script type="text/javascript" src="html_table_sql.js"></script>';
     //array_multisort($sort, SORT_ASC, SORT_STRING,$tot_result);
     $sort_sel=1;
+
+    $sorted_element=0;//0:id, 1:name, 2:birthday, 3:age
+    $sorted_increase_decrease=0;//0: increase, 1: decrease
+    
     print '<table id="myTable" border="2"><tr><th onclick="sortTable1();">id</th><th onclick="sortTable2();">name</th><th onclick="sortTable3();">birthday</th><th onclick="sortTable4();">age</th></tr>';
     for($i=0;$i<$tot;$i++){
         print "<tr>" ; 
