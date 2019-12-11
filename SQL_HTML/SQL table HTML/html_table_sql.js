@@ -3,9 +3,15 @@ function sortTable1() {
     var chk_sorted = true;
     if (x.innerHTML === "id &#62;") {
         x.innerHTML = "id &#60;";
+        document.getElementById("name_sec").innerHTML = "name";
+        document.getElementById("birthday_sec").innerHTML = "birthday";
+        document.getElementById("age_sec").innerHTML = "age";
         chk_sorted = false;
     } else {
         x.innerHTML = "id &#62;";
+        document.getElementById("name_sec").innerHTML = "name";
+        document.getElementById("birthday_sec").innerHTML = "birthday";
+        document.getElementById("age_sec").innerHTML = "age";
     }
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
@@ -57,9 +63,15 @@ function sortTable2() {
     var chk_sorted = true;
     if (x.innerHTML === "name &#62;") {
         x.innerHTML = "name &#60;";
+        document.getElementById("id_sec").innerHTML = "id";
+        document.getElementById("birthday_sec").innerHTML = "birthday";
+        document.getElementById("age_sec").innerHTML = "age";
         chk_sorted = false;
     } else {
         x.innerHTML = "name &#62;";
+        document.getElementById("id_sec").innerHTML = "id";
+        document.getElementById("birthday_sec").innerHTML = "birthday";
+        document.getElementById("age_sec").innerHTML = "age";
     }
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
@@ -111,9 +123,15 @@ function sortTable3() {
     var chk_sorted = true;
     if (x.innerHTML === "birthday &#62;") {
         x.innerHTML = "birthday &#60;";
+        document.getElementById("id_sec").innerHTML = "id";
+        document.getElementById("name_sec").innerHTML = "name";
+        document.getElementById("age_sec").innerHTML = "age";
         chk_sorted = false;
     } else {
         x.innerHTML = "birthday &#62;";
+        document.getElementById("id_sec").innerHTML = "id";
+        document.getElementById("name_sec").innerHTML = "name";
+        document.getElementById("age_sec").innerHTML = "age";
     }
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
@@ -165,9 +183,15 @@ function sortTable4() {
     var chk_sorted = true;
     if (x.innerHTML === "age &#62;") {
         x.innerHTML = "age &#60;";
+        document.getElementById("id_sec").innerHTML = "id";
+        document.getElementById("name_sec").innerHTML = "name";
+        document.getElementById("birthday_sec").innerHTML = "birthday";
         chk_sorted = false;
     } else {
         x.innerHTML = "age &#62;";
+        document.getElementById("id_sec").innerHTML = "id";
+        document.getElementById("name_sec").innerHTML = "name";
+        document.getElementById("birthday_sec").innerHTML = "birthday";
     }
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
