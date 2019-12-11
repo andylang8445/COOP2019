@@ -1,12 +1,16 @@
 function sortTable1() {
+    var x = document.getElementById("id_sec");
+    var chk_sorted = true;
+    if (x.innerHTML === "id &#62;") {
+        x.innerHTML = "id &#60;";
+        chk_sorted = false;
+    } else {
+        x.innerHTML = "id &#62;";
+    }
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
     switching = true;
     rows = table.rows;
-    var increse = true;
-    if (rows[0].getElementsByTagName("TD")[0] > rows[1].getElementsByTagName("TD")[0]) {
-        increse = false;
-    }
     /*Make a loop that will continue until
     no switching has been done:*/
 
@@ -24,11 +28,11 @@ function sortTable1() {
             x = rows[i].getElementsByTagName("TD")[0];
             y = rows[i + 1].getElementsByTagName("TD")[0];
             //check if the two rows should switch place:
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() && increse == true) {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() && chk_sorted === true) {
                 //if so, mark as a switch and break the loop:
                 shouldSwitch = true;
                 break;
-            } else if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() && increse == false) {
+            } else if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() && chk_sorted === false) {
                 shouldSwitch = true;
                 break;
             }
@@ -41,7 +45,7 @@ function sortTable1() {
         }
     }
 
-    if (document.getElementById("demo").innerHTML == "") {
+    if (document.getElementById("demo").innerHTML === "") {
         document.getElementById("demo").innerHTML = "Table Sorted!";
     } else {
         document.getElementById("demo").innerHTML = "";
@@ -49,14 +53,18 @@ function sortTable1() {
 }
 
 function sortTable2() {
+    var x = document.getElementById("name_sec");
+    var chk_sorted = true;
+    if (x.innerHTML === "name &#62;") {
+        x.innerHTML = "name &#60;";
+        chk_sorted = false;
+    } else {
+        x.innerHTML = "name &#62;";
+    }
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
     switching = true;
     rows = table.rows;
-    var increse = true;
-    if (rows[0].getElementsByTagName("TD")[1] > rows[1].getElementsByTagName("TD")[1]) {
-        increse = false;
-    }
     /*Make a loop that will continue until
     no switching has been done:*/
 
@@ -74,11 +82,11 @@ function sortTable2() {
             x = rows[i].getElementsByTagName("TD")[1];
             y = rows[i + 1].getElementsByTagName("TD")[1];
             //check if the two rows should switch place:
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() && increse == true) {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() && chk_sorted === true) {
                 //if so, mark as a switch and break the loop:
                 shouldSwitch = true;
                 break;
-            } else if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() && increse == false) {
+            } else if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() && chk_sorted === false) {
                 shouldSwitch = true;
                 break;
             }
@@ -91,7 +99,7 @@ function sortTable2() {
         }
     }
 
-    if (document.getElementById("demo").innerHTML == "") {
+    if (document.getElementById("demo").innerHTML === "") {
         document.getElementById("demo").innerHTML = "Table Sorted!";
     } else {
         document.getElementById("demo").innerHTML = "";
@@ -99,14 +107,18 @@ function sortTable2() {
 }
 
 function sortTable3() {
+    var x = document.getElementById("birthday_sec");
+    var chk_sorted = true;
+    if (x.innerHTML === "birthday &#62;") {
+        x.innerHTML = "birthday &#60;";
+        chk_sorted = false;
+    } else {
+        x.innerHTML = "birthday &#62;";
+    }
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
     switching = true;
     rows = table.rows;
-    var increse = true;
-    if (rows[0].getElementsByTagName("TD")[2] > rows[1].getElementsByTagName("TD")[2]) {
-        increse = false;
-    }
     /*Make a loop that will continue until
     no switching has been done:*/
 
@@ -124,11 +136,11 @@ function sortTable3() {
             x = rows[i].getElementsByTagName("TD")[2];
             y = rows[i + 1].getElementsByTagName("TD")[2];
             //check if the two rows should switch place:
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() && increse == true) {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() && chk_sorted === true) {
                 //if so, mark as a switch and break the loop:
                 shouldSwitch = true;
                 break;
-            } else if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() && increse == false) {
+            } else if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() && chk_sorted === false) {
                 shouldSwitch = true;
                 break;
             }
@@ -141,7 +153,7 @@ function sortTable3() {
         }
     }
 
-    if (document.getElementById("demo").innerHTML == "") {
+    if (document.getElementById("demo").innerHTML === "") {
         document.getElementById("demo").innerHTML = "Table Sorted!";
     } else {
         document.getElementById("demo").innerHTML = "";
@@ -149,14 +161,18 @@ function sortTable3() {
 }
 
 function sortTable4() {
+    var x = document.getElementById("age_sec");
+    var chk_sorted = true;
+    if (x.innerHTML === "age &#62;") {
+        x.innerHTML = "age &#60;";
+        chk_sorted = false;
+    } else {
+        x.innerHTML = "age &#62;";
+    }
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
     switching = true;
     rows = table.rows;
-    var increse = true;
-    if (rows[0].getElementsByTagName("TD")[3] > rows[1].getElementsByTagName("TD")[3]) {
-        increse = false;
-    }
     /*Make a loop that will continue until
     no switching has been done:*/
 
@@ -174,11 +190,11 @@ function sortTable4() {
             x = rows[i].getElementsByTagName("TD")[3];
             y = rows[i + 1].getElementsByTagName("TD")[3];
             //check if the two rows should switch place:
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() && increse == true) {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() && chk_sorted === true) {
                 //if so, mark as a switch and break the loop:
                 shouldSwitch = true;
                 break;
-            } else if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() && increse == false) {
+            } else if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() && chk_sorted === false) {
                 shouldSwitch = true;
                 break;
             }
@@ -191,7 +207,7 @@ function sortTable4() {
         }
     }
 
-    if (document.getElementById("demo").innerHTML == "") {
+    if (document.getElementById("demo").innerHTML === "") {
         document.getElementById("demo").innerHTML = "Table Sorted!";
     } else {
         document.getElementById("demo").innerHTML = "";
