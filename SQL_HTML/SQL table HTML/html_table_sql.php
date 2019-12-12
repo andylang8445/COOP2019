@@ -14,12 +14,10 @@ function toggle() {
     $sql_db_name="test";
 
 	$conn = mysqli_connect($sql_addr,$sql_user_name,$sql_pwd,$sql_db_name) or die("Connection Failed");
-	print "Connection Successful!";
+	print "Connection Successful!<br>";
 	
 	print "html_table_sql.php loaded";
 
-    print "<p id='demo'></p>";
-	
 	$tot=0;
 
     $tot_result=array(

@@ -50,12 +50,6 @@ function sortTable1() {
             switching = true;
         }
     }
-
-    if (document.getElementById("demo").innerHTML === "") {
-        document.getElementById("demo").innerHTML = "Table Sorted!";
-    } else {
-        document.getElementById("demo").innerHTML = "";
-    }
 }
 
 function sortTable2() {
@@ -109,12 +103,6 @@ function sortTable2() {
             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
             switching = true;
         }
-    }
-
-    if (document.getElementById("demo").innerHTML === "") {
-        document.getElementById("demo").innerHTML = "Table Sorted!";
-    } else {
-        document.getElementById("demo").innerHTML = "";
     }
 }
 
@@ -170,12 +158,6 @@ function sortTable3() {
             switching = true;
         }
     }
-
-    if (document.getElementById("demo").innerHTML === "") {
-        document.getElementById("demo").innerHTML = "Table Sorted!";
-    } else {
-        document.getElementById("demo").innerHTML = "";
-    }
 }
 
 function sortTable4() {
@@ -229,11 +211,5 @@ function sortTable4() {
             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
             switching = true;
         }
-    }
-
-    if (document.getElementById("demo").innerHTML === "") {
-        document.getElementById("demo").innerHTML = "Table Sorted!";
-    } else {
-        document.getElementById("demo").innerHTML = "";
     }
 }
