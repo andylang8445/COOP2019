@@ -60,11 +60,11 @@
     print '<table id="myTable" border="2"><tr><th align="right" id="id_sec" onclick="sortTable1();">id &#62;</th><th align="right" id="name_sec" onclick="sortTable2();">name</th><th align="right" id="birthday_sec" onclick="sortTable3();">birthday</th><th align="right" id="age_sec" onclick="sortTable4();">age</th></tr>';
     for($i=0;$i<$tot;$i++){
         print "<tr>" ; 
-        print "<td align='right'>" .$tot_result[$i][0]."</td>"; 
-        print "<td align='right'>" .$tot_result[$i][1]."</td>"; 
+        print "<td align='right'>" .$tot_result[$i][0]."</td>";
+        print "<td align='right'>" .$tot_result[$i][1]."</td>";
         print "<td align='right'>" .$tot_result[$i][2]."</td>";
-        print "<td align='right'>" .$tot_result[$i][3]."</td>"; 
-        print "</tr>" ; 
+        print "<td align='right'>" .$tot_result[$i][3]."</td>";
+        print "</tr>" ;
     } 
     /*if(count($_COOKIE)> 0) {
         echo "Cookies are enabled.";
