@@ -66,13 +66,13 @@ function toggle() {
     $sorted_element=0;//0:id, 1:name, 2:birthday, 3:age
     $sorted_increase_decrease=0;//0: increase, 1: decrease
     
-    print '<table id="myTable" border="2"><tr><th id="id_sec" onclick="sortTable1();$previous=$sorted_element;toggle();$sorted_element=0;">id &#62;</th><th id="name_sec" onclick="sortTable2();$previous=$sorted_element;toggle();$sorted_element=1;">name</th><th id="birthday_sec" onclick="sortTable3();$previous=$sorted_element;toggle();$sorted_element=2;">birthday</th><th id="age_sec" onclick="sortTable4();$previous=$sorted_element;toggle();$sorted_element=3;">age</th></tr>';
+    print '<table id="myTable" border="2"><tr><th style="text-align:center" id="id_sec" onclick="sortTable1();$previous=$sorted_element;toggle();$sorted_element=0;">id &#62;</th><th style="text-align:center" id="name_sec" onclick="sortTable2();$previous=$sorted_element;toggle();$sorted_element=1;">name</th><th style="text-align:center" id="birthday_sec" onclick="sortTable3();$previous=$sorted_element;toggle();$sorted_element=2;">birthday</th><th style="text-align:center" id="age_sec" onclick="sortTable4();$previous=$sorted_element;toggle();$sorted_element=3;">age</th></tr>';
     for($i=0;$i<$tot;$i++){
         print "<tr>" ; 
-        print "<td>" .$tot_result[$i][0]."</td>"; 
-        print "<td>" .$tot_result[$i][1]."</td>"; 
-        print "<td>" .$tot_result[$i][2]."</td>";
-        print "<td>" .$tot_result[$i][3]."</td>"; 
+        print "<td style="text-align:center">" .$tot_result[$i][0]."</td>"; 
+        print "<td style="text-align:center">" .$tot_result[$i][1]."</td>"; 
+        print "<td style="text-align:center">" .$tot_result[$i][2]."</td>";
+        print "<td style="text-align:center">" .$tot_result[$i][3]."</td>"; 
         print "</tr>" ; 
     } 
     /*if(count($_COOKIE)> 0) {
