@@ -57,7 +57,7 @@
     $sorted_element=0;//0:id, 1:name, 2:birthday, 3:age
     $sorted_increase_decrease=0;//0: increase, 1: decrease
     
-    print '<table id="myTable" border="2"><tr><th align="right" id="id_sec" onclick="sortTable1();">id &#62;</th><th align="right" id="name_sec" onclick="sortTable2();">name</th><th align="right" id="birthday_sec" onclick="sortTable3();">birthday</th><th align="right" id="age_sec" onclick="sortTable4();">age</th></tr>';
+    print '<table id="myTable" border="2"><tr><th align="right" id="id_sec" onclick="sortTable1_1();">id &#62;</th><th align="right" id="name_sec" onclick="sortTable2();">name</th><th align="right" id="birthday_sec" onclick="sortTable3();">birthday</th><th align="right" id="age_sec" onclick="sortTable4();">age</th></tr>';
     for($i=0;$i<$tot;$i++){
         print "<tr>" ; 
         print "<td align='right'>" .$tot_result[$i][0]."</td>";
