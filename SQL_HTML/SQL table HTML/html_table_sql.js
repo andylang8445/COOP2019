@@ -1,9 +1,9 @@
 function sortTable1() {
     var x = document.getElementById("id_sec");
-    x.innerHTML = "id &#62;";
-    document.getElementById("name_sec").innerHTML = "name";
-    document.getElementById("birthday_sec").innerHTML = "birthday";
-    document.getElementById("age_sec").innerHTML = "age";
+    x.innerHTML = "<strong>id &#62;</strong>";
+    document.getElementById("name_sec").innerHTML = "<strong>name</strong>";
+    document.getElementById("birthday_sec").innerHTML = "<strong>birthday</strong>";
+    document.getElementById("age_sec").innerHTML = "<strong>age</strong>";
     x.onclick = sortTable1_1;
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
@@ -43,10 +43,10 @@ function sortTable1() {
 
 function sortTable1_1() {
     var x = document.getElementById("id_sec");
-    x.innerHTML = "id &#60;";
-    document.getElementById("name_sec").innerHTML = "name";
-    document.getElementById("birthday_sec").innerHTML = "birthday";
-    document.getElementById("age_sec").innerHTML = "age";
+    x.innerHTML = "<strong>id &#60;</strong>";
+    document.getElementById("name_sec").innerHTML = "<strong>name</strong>";
+    document.getElementById("birthday_sec").innerHTML = "<strong>birthday</strong>";
+    document.getElementById("age_sec").innerHTML = "<strong>age</strong>";
     x.onclick = sortTable1;
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
@@ -86,10 +86,10 @@ function sortTable1_1() {
 
 function sortTable2() {
     var x = document.getElementById("name_sec");
-    x.innerHTML = "name &#62;";
-    document.getElementById("id_sec").innerHTML = "id";
-    document.getElementById("birthday_sec").innerHTML = "birthday";
-    document.getElementById("age_sec").innerHTML = "age";
+    x.innerHTML = "<strong>name &#62;</strong>";
+    document.getElementById("id_sec").innerHTML = "<strong>id</strong>";
+    document.getElementById("birthday_sec").innerHTML = "<strong>birthday</strong>";
+    document.getElementById("age_sec").innerHTML = "<strong>age</strong>";
     x.onclick = sortTable2_1;
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
@@ -129,10 +129,10 @@ function sortTable2() {
 
 function sortTable2_1() {
     var x = document.getElementById("name_sec");
-    x.innerHTML = "name &#60;";
-    document.getElementById("id_sec").innerHTML = "id";
-    document.getElementById("birthday_sec").innerHTML = "birthday";
-    document.getElementById("age_sec").innerHTML = "age";
+    x.innerHTML = "<strong>name &#60;</strong>";
+    document.getElementById("id_sec").innerHTML = "<strong>id</strong>";
+    document.getElementById("birthday_sec").innerHTML = "<strong>birthday</strong>";
+    document.getElementById("age_sec").innerHTML = "<strong>age</strong>";
     x.onclick = sortTable2;
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
@@ -173,10 +173,10 @@ function sortTable2_1() {
 function sortTable3() {
     var x = document.getElementById("birthday_sec");
     var chk_sorted = true;
-    x.innerHTML = "birthday &#62;";
-    document.getElementById("id_sec").innerHTML = "id";
-    document.getElementById("name_sec").innerHTML = "name";
-    document.getElementById("age_sec").innerHTML = "age";
+    x.innerHTML = "<strong>birthday &#62;</strong>";
+    document.getElementById("id_sec").innerHTML = "<strong>id</strong>";
+    document.getElementById("name_sec").innerHTML = "<strong>name</strong>";
+    document.getElementById("age_sec").innerHTML = "<strong>age</strong>";
     x.onclick = sortTable3_1;
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
@@ -217,10 +217,10 @@ function sortTable3() {
 function sortTable3_1() {
     var x = document.getElementById("birthday_sec");
     var chk_sorted = true;
-    x.innerHTML = "birthday &#60;";
-    document.getElementById("id_sec").innerHTML = "id";
-    document.getElementById("name_sec").innerHTML = "name";
-    document.getElementById("age_sec").innerHTML = "age";
+    x.innerHTML = "<strong>birthday &#60;</strong>";
+    document.getElementById("id_sec").innerHTML = "<strong>id</strong>";
+    document.getElementById("name_sec").innerHTML = "<strong>name</strong>";
+    document.getElementById("age_sec").innerHTML = "<strong>age</strong>";
     x.onclick = sortTable3;
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
@@ -261,10 +261,10 @@ function sortTable3_1() {
 function sortTable4() {
     var x = document.getElementById("age_sec");
     var chk_sorted = true;
-    x.innerHTML = "age &#62;";
-    document.getElementById("id_sec").innerHTML = "id";
-    document.getElementById("name_sec").innerHTML = "name";
-    document.getElementById("birthday_sec").innerHTML = "birthday";
+    x.innerHTML = "<strong>age &#62;</strong>";
+    document.getElementById("id_sec").innerHTML = "<strong>id</strong>";
+    document.getElementById("name_sec").innerHTML = "<strong>name</strong>";
+    document.getElementById("birthday_sec").innerHTML = "<strong>birthday</strong>";
     x.onclick = sortTable4_1;
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
@@ -305,10 +305,10 @@ function sortTable4() {
 function sortTable4_1() {
     var x = document.getElementById("age_sec");
     var chk_sorted = true;
-    x.innerHTML = "age &#60;";
-    document.getElementById("id_sec").innerHTML = "id";
-    document.getElementById("name_sec").innerHTML = "name";
-    document.getElementById("birthday_sec").innerHTML = "birthday";
+    x.innerHTML = "<strong>age &#60;</strong>";
+    document.getElementById("id_sec").innerHTML = "<strong>id</strong>";
+    document.getElementById("name_sec").innerHTML = "<strong>name</strong>";
+    document.getElementById("birthday_sec").innerHTML = "<strong>birthday</strong>";
     x.onclick = sortTable4;
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
