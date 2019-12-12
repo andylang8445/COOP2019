@@ -1,7 +1,7 @@
 function sortTable1() {
     var x = document.getElementById("id_sec");
     var chk_sorted = true;
-    if (x.innerHTML === "id &#62;") {
+    if (x.innerHTML == "id &#62;") {
         x.innerHTML = "id &#60;";
         document.getElementById("name_sec").innerHTML = "name";
         document.getElementById("birthday_sec").innerHTML = "birthday";
