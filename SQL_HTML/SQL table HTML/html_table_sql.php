@@ -14,11 +14,11 @@ function toggle() {
     $sql_db_name="test";
 
 	$conn = mysqli_connect($sql_addr,$sql_user_name,$sql_pwd,$sql_db_name) or die("Connection Failed");
-	print "Connection Successful!"."<p>";
+	print "Connection Successful!";
 	
 	print "html_table_sql.php loaded";
 
-    
+    print "<p id='demo'></p>";
 	
 	$tot=0;
 
