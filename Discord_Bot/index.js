@@ -1,8 +1,9 @@
 require('dotenv').config();
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+const TOKEN = process.env.TOKEN;
 
-bot.login('NjU1MDU2NDQ0NTYzMTI4MzIx.XfOnug.9phiXMFXpz-P6qDZu1wYJ9BeFuI');
+bot.login(TOKEN);
 
 bot.on('ready', () => {
     console.info(`Logged in as ${bot.user.tag}!`);
@@ -21,11 +22,7 @@ bot.on('message', msg => {
             msg.reply('Please tag a valid user!');
         }
     }
-    if (msg.content === 'ls') {
-        msg.reply('<strong>ls</strong>');
-    }
-    if (msg.content === '?end_bot') {
-        msg.channel.send('Bot dead');
-        client.destroy();
-    }
 });
+
+
+bot.login('NjU1MDU2NDQ0NTYzMTI4MzIx.XfOnug.9phiXMFXpz-P6qDZu1wYJ9BeFuI');
