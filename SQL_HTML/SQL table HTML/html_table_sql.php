@@ -3,14 +3,11 @@
     $sql_user_name="root";
     $sql_pwd="0000";
     $sql_db_name="test";
-
 	$conn = mysqli_connect($sql_addr,$sql_user_name,$sql_pwd,$sql_db_name) or die("Connection Failed");
 	print "Connection Successful!<br>";
 	
 	print "html_table_sql.php loaded";
-
 	$tot=0;
-
     $tot_result=array(
         array(),
         array(),
@@ -52,12 +49,11 @@
     echo '<script type="text/javascript" src="html_table_sql.js"></script>';
     //array_multisort($sort, SORT_ASC, SORT_STRING,$tot_result);
     $sort_sel=1;
-
     $previous=0;
     $sorted_element=0;//0:id, 1:name, 2:birthday, 3:age
     $sorted_increase_decrease=0;//0: increase, 1: decrease
     
-    print '<table id="myTable" border="2"><tr><th align="center" width="40"><button id="id_sec" onclick="sortTable1_1();" style="font-size:2em;"><strong>id &#62;</strong></button></th><th align="center" width="64"><button id="name_sec" onclick="sortTable2();"><strong>name</strong></button></th><th align="center" width="72"><button id="birthday_sec" onclick="sortTable3();"><strong>birthday</strong></button></th><th align="center" width="50"><button id="age_sec" onclick="sortTable4();"><strong>age</strong></button></th></tr>';
+    print '<table id="myTable" border="2"><tr><th align="center" width="40"><button id="id_sec" onclick="sortTable1_1();" style="height:25px"><strong>id &#62;</strong></button></th><th align="center" width="64"><button id="name_sec" onclick="sortTable2();" style="height:25px"><strong>name</strong></button></th><th align="center" width="72"><button id="birthday_sec" onclick="sortTable3();" style="height:25px"><strong>birthday</strong></button></th><th align="center" width="50"><button id="age_sec" onclick="sortTable4();" style="height:25px"><strong>age</strong></button></th></tr>';
     for($i=0;$i<$tot;$i++){
         print "<tr>" ; 
         print "<td align='right'>" .$tot_result[$i][0]."</td>";
@@ -82,7 +78,6 @@
                     $tot_result[$j][$k]=$tmp; 
                 }
             }
-
         }
     }
     mysqli_close($conn);
