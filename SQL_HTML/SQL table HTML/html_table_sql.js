@@ -5,6 +5,9 @@ function sortTable1() {
     document.getElementById("birthday_sec").innerHTML = "<strong>birthday</strong>";
     document.getElementById("age_sec").innerHTML = "<strong>age</strong>";
     x.onclick = sortTable1_1;
+    document.getElementById("name_sec").onclick=sortTable2;
+    document.getElementById("birthday_sec").onclick=sortTable3;
+    document.getElementById("age_sec").onclick=sortTable4;
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
     switching = true;
