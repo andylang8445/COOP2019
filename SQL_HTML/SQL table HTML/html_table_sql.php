@@ -56,10 +56,10 @@
     print '<table id="myTable" border="2"><tr><th align="center" width="40"><button id="id_sec" onclick="sortTable1_1();" style="width:100%; height:25px; font-size:10.2pt"><strong>id &#62;</strong></button></th><th align="center" width="64"><button id="name_sec" onclick="sortTable2();" style="width:100%; height:25px; font-size:10.2pt"><strong>name</strong></button></th><th align="center" width="85"><button id="birthday_sec" onclick="sortTable3();" style="width:100%; height:25px; font-size:10.2pt"><strong>birthday</strong></button></th><th align="center" width="55"><button id="age_sec" onclick="sortTable4();" style="width:100%; height:25px; font-size:10.2pt"><strong>age</strong></button></th></tr>';
     for($i=0;$i<$tot;$i++){
         print "<tr>" ; 
-        print "<td align='right'>" .$tot_result[$i][0]."</td>";
-        print "<td align='right'>" .$tot_result[$i][1]."</td>";
-        print "<td align='right'>" .$tot_result[$i][2]."</td>";
-        print "<td align='right'>" .$tot_result[$i][3]."</td>";
+        print "<td align='center'>" .$tot_result[$i][0]."</td>";
+        print "<td align='center'>" .$tot_result[$i][1]."</td>";
+        print "<td align='center'>" .$tot_result[$i][2]."</td>";
+        print "<td align='center'>" .$tot_result[$i][3]."</td>";
         print "</tr>" ;
     } 
     /*if(count($_COOKIE)> 0) {
