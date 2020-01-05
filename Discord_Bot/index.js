@@ -5,8 +5,9 @@ const bot = new Discord.Client();
 var mysql = require('mysql');
 var sql_conn_req_cnt = 0;
 var time_curr;
+const token = '------------------Put the token here-----------------';
 
-bot.login('------------------Put the token here-----------------');
+bot.login(token);
 
 var con = mysql.createConnection({
     host: "localhost", // ip address of server running mysql
@@ -44,7 +45,7 @@ bot.on('message', msg => {
     } else if (msg.content === '!restart') {
         msg.channel.send('restarting...');
         bot.destroy();
-        bot.login('------------------Put the token here-----------------');
+        bot.login(token);
         msg.channel.send('restarted!\nIt might take few more seconds for the bot to be back online');
         console.info('Bot has been restarted!');
     } else if (msg.content === 'list') {
