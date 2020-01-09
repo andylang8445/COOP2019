@@ -5,7 +5,7 @@ const bot = new Discord.Client();
 var mysql = require('mysql');
 var sql_conn_req_cnt = 0;
 var time_curr;
-const token = '------------------Put the token here-----------------';
+const token = 'NjU1MDU2NDQ0NTYzMTI4MzIx.XhSYPg.ONhPrvt94EnHfvE61rszp3ZzuOU';
 
 bot.login(token);
 
@@ -18,15 +18,15 @@ var con = mysql.createConnection({
 
 bot.on('ready', () => {
     console.info(`Logged in as ${bot.user.tag}!`);
+    var generalChannel = client.channels.get("123456789") // Replace with known channel ID
+    generalChannel.send("Bot online!")
 });
 
 bot.on('message', msg => {
-
-
     if (msg.content === '!help') {
         msg.channel.send('`ping`: Reply pong and network ping\n`!kick`: Kicks the player from the current Discord chat server\n`!info`: Shows the information of the bot\n`!end_bot`: Turn off the bot program\n`!restart`: Reboots the bot\n`list`: Shows the list from mySQL');
 
-    } else if (msg.content === 'ping') {
+    } else if (msg.content === 'ping' || msg.content === 'Ping') {
         //msg.reply('pong');
         msg.channel.send('pong `' + Math.floor(bot.ping) + ' ms`');
     } else if (msg.content.startsWith('!kick')) {
@@ -48,7 +48,7 @@ bot.on('message', msg => {
         bot.login(token);
         msg.channel.send('restarted!\nIt might take few more seconds for the bot to be back online');
         console.info('Bot has been restarted!');
-    } else if (msg.content === 'list') {
+    } else if (msg.content === 'list' || msg.content === 'List') {
 
         time_curr = new Date();
 
@@ -61,12 +61,17 @@ bot.on('message', msg => {
         con.query("SELECT * FROM index1", function (err, result, fields) {
             // if any error while executing above query, throw error
             if (err) throw err;
+            var sendStr = "id | Name | Birthday | age"
+            //msg.channel.send("id | Name | Birthday | age")
             for (var i = 0; i < result.length; i++) {
                 // if there is no error, you have the result
                 //console.log(result[i].id + ". " + result[i].name + " " + result[i].birthday + " " + result[i].age);
-                msg.channel.send(result[i].id + ". " + result[i].name + " " + result[i].birthday + " " + result[i].age);
-
+                var bdString = result[i].birthday.toISOString();
+                bdString = bdString.slice(0, 10);
+                sendStr += "\n" + result[i].id + ". " + result[i].name + " | " + bdString + " | " + result[i].age;
+                //msg.channel.send(result[i].id + ". " + result[i].name + " | " + bdString + " | " + result[i].age);
             }
+            msg.channel.send(sendStr);
         });
         //});
 
