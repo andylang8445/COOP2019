@@ -30,6 +30,45 @@
         }
 
     </style>
+    <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.0.0.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            var socket = io.connect();
+            if (socket != null && socket != undefined) {
+                var welcome = document.createElement('li');
+                welcome.innerHTML = '<system> The chatting has been started';
+                document.getElementById('chat').appendChild(welcome);
+
+                socket.on('rMsg', function(data) {
+                    var li = document.createElement('li');
+                    li.innerHTML = data.name + ' : ' + data.msg;
+                    document.getElementById('chat').appendChild('li');
+                });
+
+                document.getElementById('submit').onclick = function() {
+                    var val = document.getElementById('msg').value;
+                    var name = document.getElementById('name').value;
+                    socket.emit('sMsg', {
+                        name: name,
+                        msg: val
+                    });
+                    document.getElementById('msg').value = '';
+                };
+            }
+        };
+
+    </script>
 </head>
+
+<body>
+    <div id="container">
+        <div id="chatBox">
+            <ul id="chat"></ul>
+        </div>
+        <input type="text" id="name" />
+        <input type="text" id="msg" />
+        <button id="submit">send</button>
+    </div>
+</body>
 
 </html>
