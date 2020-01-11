@@ -1,0 +1,22 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "sample program for websocket",
+  "main": "socketio.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^13.5.0",
+    "socket.io": "^2.3.0",
+    "ws": "^7.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "coop",
+    "2019-2020"
+  ],
+  "author": "Hongjun Yun",
+  "license": "ISC"
+}

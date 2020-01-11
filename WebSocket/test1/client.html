@@ -1,0 +1,52 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <input id="num1" type="text">
+    X
+    <input id="num2" type="text">
+    =
+    <input id="result" type="text" readonly>
+    <button id="submit" type="submit">Get Result</button>
+
+</body>
+
+<script src="http://localhost:80/socket.io/socket.io.js"></script>
+
+<script>
+    var socket = io.connect('http://localhost:8080'); //localhost로 연결합니다.
+    document.getElementById('submit').onclick = function() {
+        var n1 = document.getElementById('num1').value;
+        var n2 = document.getElementById('num2').value;
+        alert('Input detected! num1: ' + n1 + 'num2: ' + n2);
+        socket.emit('sNum', {
+            num1: n1,
+            num2: n2
+        });
+    }
+    document.getElementById('submit').onclick = function() {
+        var n1 = document.getElementById('num1').value;
+        var n2 = document.getElementById('num2').value;
+        socket.emit('send', {
+            n1: n1,
+            n2: n2
+        });
+    }
+
+    socket.on('news', function(data) { // 서버에서 news 이벤트가 일어날 때 데이터를 받습니다.
+
+        console.log(data);
+
+        socket.emit('my other event', {
+            my: 'data'
+        }); //서버에 my other event 이벤트를 보냅니다.
+
+    });
+
+</script>
+
+</html>
