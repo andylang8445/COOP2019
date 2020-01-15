@@ -37,21 +37,28 @@
     <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.0.0.js"></script>
     <script type="text/javascript">
         window.onload = function() {
-            var socket = io.connect();
-            if (socket != null && socket != undefined) {
+                var socket = io.connect();
+                if (socket != null && socket != undefined) {
+                    socket.on('news', function(data) {
+                            console.log(data);
 
-                socket.on('getResult', function(data) {
-                    document.getElementById('result').value = data.result;
-                })
+                            socket.on('getResult', function(data) {
+                                alert('Result recieved!');
+                                document.getElementById('result').value = data.result;
+                            })
 
-                document.getElementById('submit').onclick = function() {
-                    var n1 = document.getElementById('num1').value;
-                    var n2 = document.getElementById('num2').value;
-                    alert('Input detected! num1: '+n1+'num2: '+n2);
-                    socket.emit('sNum', {num1: n1, num2: n2});
+                            document.getElementById('submit').onclick = function() {
+                                var n1 = document.getElementById('num1').value;
+                                var n2 = document.getElementById('num2').value;
+                                socket.emit('sNum', {
+                                    num1: n1,
+                                    num2: n2
+                                });
+                                alert('Input detected!! num1: ' + n1 + 'num2: ' + n2);
+                            }
+                        }
+                    }
                 }
-            }
-        }
 
     </script>
 </body>
